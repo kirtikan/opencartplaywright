@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:endtoend": "npm run allure:save-history && rimraf allure-results && npm run allure:restore-history && npx playwright test --grep @endtoend --headed",
-    "test:fix": "npm run allure:save-history && rimraf allure-results && npm run allure:restore-history && npx playwright test --grep @fix --headed",
-    "test:datadriven": "npm run allure:save-history && rimraf allure-results && npm run allure:restore-history && npx playwright test --grep @datadriven --headed",
+    "test:endtoend": "npm run allure:save-history && rimraf allure-results && npm run allure:restore-history && npx playwright test --grep @endtoend",
+    "test:fix": "npm run allure:save-history && rimraf allure-results && npm run allure:restore-history && npx playwright test --grep @fix",
+    "test:datadriven": "npm run allure:save-history && rimraf allure-results && npm run allure:restore-history && npx playwright test --grep @datadriven",
+    "test:sanity": "npm run allure:save-history && rimraf allure-results && npm run allure:restore-history && npx playwright test --grep @sanity",
+    "test:master": "npm run allure:save-history && rimraf allure-results && npm run allure:restore-history && npx playwright test --grep @master",
     "allure:save-history": "rimraf allure-history-backup && (xcopy allure-report\\history allure-history-backup /E /I /Y || echo no history to backup)",
     "allure:restore-history": "mkdir allure-results && (xcopy allure-history-backup allure-results\\history /E /I /Y || echo no history to restore)",
     "report:allure": "npx allure generate allure-results --clean -o allure-report && npm run allure:save-history && npx allure open allure-report"

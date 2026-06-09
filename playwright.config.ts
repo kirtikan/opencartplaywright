@@ -7,7 +7,7 @@ export default defineConfig({
   //retries: process.env.CI ? 2 : 0, 
   retries: 1,
   //workers: process.env.CI ? 1 : undefined, 
-  workers: 1,
+  workers: 2,
 
   reporter: [
     ['html', { outputFolder: './reports/html-report' }
@@ -17,7 +17,7 @@ export default defineConfig({
       suiteTitle: true,
       environmentInfo: {
         // App Info
-        App_URL: process.env.APP_URL || 'https://opencart.example.com',
+        App_URL: process.env.APP_URL || 'https://tutorialsninja.com/demo/',
         App_Version: process.env.APP_VERSION || '1.0.0',
         Environment: process.env.ENV || 'QA',
 
@@ -30,7 +30,7 @@ export default defineConfig({
         Node_Version: process.version,
         // Execution Info
         Execution_Mode: process.env.CI ? 'CI Pipeline' : 'Local',
-        Run_By: process.env.USERNAME || process.env.USER || 'unknown',
+        Run_By: process.env.USERNAME || process.env.USER || 'Kirti',
       }
     }
     ],

@@ -1,4 +1,4 @@
-npm install
-npm install -D allure-playwright
-npm install -D allure-commandline
-npx playwright install
+call npm install
+call npm install -D allure-playwright
+call npm install -D allure-commandline
+call npx playwright install
